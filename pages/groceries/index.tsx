@@ -1,10 +1,11 @@
 import NavigationBar from "../../components/NavBar/NavigationBar";
+import ContentList from "../../components/listContent/ContentList";
 
 function GroceryPage(){
     return (
-        <div className="max-w-967">
+        <div>
             <NavigationBar />
-            
+            <ContentList />
         </div>
    );
 }
