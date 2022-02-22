@@ -23,7 +23,6 @@ model Groceries {
   Title String
   ShopId Int
   Shop Shops @relation(fields:[ShopId], references: [id])
-
   Description String?
   Price Float
   Amount Int
