@@ -1,13 +1,27 @@
 import ContentList from "../../components/listContent/listContent";
 import NavigationBar from "../../components/NavBar/NavigationBar";
+import { PrismaClient } from '@prisma/client';
 
-function GroceryPage(){
+const prisma = new PrismaClient;
+
+function GroceryPage(props){
+    console.log(props.foods)
     return (
         <div>
             <NavigationBar />
-            <ContentList />
+            <ContentList foods={props.foods}/>
         </div>
         );
 }
+
+export async function getServerSideProps(){
+    const getFood = await prisma.groceries.findMany();
+    console.log(getFood)
+    return { 
+        props : {
+            foods: getFood
+        }
+    }
+  }
 
 export default GroceryPage;

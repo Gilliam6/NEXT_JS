@@ -1,6 +1,8 @@
 import Link from 'next/link';
 
-function LandPage() 
+const prisma = new PrismaClient;
+
+function LandPage(props) 
 {
   return ( 
     <div className='w-screen h-screen bg-gray-400 flex flex-row flex-nowrap justify-center items-center'>
@@ -8,7 +10,7 @@ function LandPage()
         <h1 className='text-4xl font-black m-2'>Groceries Ninja</h1>
       </div>
       <div>
-        <Link href="/groceries">
+        <Link href="/groceries" foods={props.foods}>
           <button className="btn">Groceries</button>
         </Link>
       </div>
@@ -16,5 +18,6 @@ function LandPage()
     </div>
   );
 }
+
 
 export default LandPage;
