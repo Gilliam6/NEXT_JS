@@ -1,5 +1,5 @@
-function BackDrop() {
-    return (<div className="absolute w-screen h-screen bg-black opacity-80"></div>);
+function BackDrop(props) {
+    return (<div className="absolute top-0 bottom-0 left-0 right-0 bg-black opacity-30" onClick={props.onCancel}></div>);
 }
 
 export default BackDrop;
