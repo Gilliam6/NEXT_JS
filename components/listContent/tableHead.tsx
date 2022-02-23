@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 function TableHead()
 {
    return ( 
@@ -8,7 +10,9 @@ function TableHead()
       <th>Price</th>
       <th>Shop</th>
       <th>
-          <button className="btn">Add</button>
+          <Link href="/groceries/create">
+            <button className="btn">Add</button>
+          </Link>
       </th>
     </tr>
   </thead>);
