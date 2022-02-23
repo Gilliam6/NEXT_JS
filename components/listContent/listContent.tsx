@@ -7,7 +7,7 @@ function ContentList(props : any){
         <TableHead />
         <tbody>
             {props.foods?.map((product : any)=>
-            (<TableLines key={product.id} Title={product.Title} Amount={product.Amount} Price={product.Price} Shop={product.ShopId} />))}
+            (<TableLines key={product.id} Title={product.Title} Amount={product.Amount} Price={product.Price} Shop={product.Shop.Name} />))}
         </tbody>
     </table>);
 }

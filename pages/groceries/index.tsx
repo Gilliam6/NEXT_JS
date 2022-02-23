@@ -4,7 +4,7 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient;
 
-function GroceryPage(props){
+function GroceryPage(props : any){
     console.log(props.foods)
     return (
         <div>
@@ -15,8 +15,12 @@ function GroceryPage(props){
 }
 
 export async function getServerSideProps(){
-    const getFood = await prisma.groceries.findMany();
-    console.log(getFood)
+    const getFood = await prisma.groceries.findMany({
+            include: {
+                Shop: true
+            }
+          }
+    );
     return { 
         props : {
             foods: getFood
