@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { NextPage } from "next";
 
-function LandPage() {
+const LandPage: NextPage = () => {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen bg-gray-400 flex-nowrap">
       <div>
@@ -13,6 +14,6 @@ function LandPage() {
       </div>
     </div>
   );
-}
+};
 
 export default LandPage;
