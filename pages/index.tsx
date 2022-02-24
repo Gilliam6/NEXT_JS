@@ -8,7 +8,7 @@ const LandPage: NextPage = () => {
         <h1 className="m-2 text-4xl font-black">Groceries Ninja</h1>
       </div>
       <div>
-        <Link href="/groceries">
+        <Link href="/groceries" passHref>
           <button className="btn">Groceries</button>
         </Link>
       </div>
