@@ -1,21 +1,19 @@
-import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { NextPage } from 'next';
 
-function LandPage() 
-{
-  return ( 
-    <div className='w-screen h-screen bg-gray-400 flex flex-row flex-nowrap justify-center items-center'>
+const LandPage: NextPage = () => {
+  return (
+    <div className="flex flex-col items-center justify-center w-screen h-screen bg-gray-700 flex-nowrap">
       <div>
-        <h1 className='text-4xl font-black m-2'>Groceries Ninja</h1>
+        <h1 className="m-2 text-4xl font-black">Groceries Ninja</h1>
       </div>
       <div>
-        <Link href="/groceries">
+        <Link href="/groceries" passHref>
           <button className="btn">Groceries</button>
         </Link>
       </div>
-      
     </div>
   );
-}
+};
 
 export default LandPage;

@@ -1,0 +1,8 @@
+# Do not commit Next.js cache files
+.next
+# Do not commit node_modules folder
+node_modules
+# Do not commit ENV file
+.env
+# ESLint
+.eslintcache
